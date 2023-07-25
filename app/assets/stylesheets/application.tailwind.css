@@ -21,3 +21,8 @@
   color: #ffffff;
   outline-color: hsl(var(--n)/1);
 }
+
+.text-base-content {
+  --tw-text-opacity: 1;
+  color: #ffffff;
+}
