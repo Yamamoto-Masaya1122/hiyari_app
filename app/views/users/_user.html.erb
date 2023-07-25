@@ -1,58 +1,60 @@
-<div id="<%= dom_id user %>">
-  <p class="my-5">
-    <strong class="block font-medium mb-1">Name:</strong>
-    <%= user.name %>
-  </p>
+<main class="container mx-auto mt-28 px-5 flex">  
+  <div id="<%= dom_id user %>">
+    <p class="my-5">
+      <strong class="block font-medium mb-1">Name:</strong>
+      <%= user.name %>
+    </p>
 
-  <p class="my-5">
-    <strong class="block font-medium mb-1">Gender:</strong>
-    <%= user.gender %>
-  </p>
+    <p class="my-5">
+      <strong class="block font-medium mb-1">Gender:</strong>
+      <%= user.gender %>
+    </p>
 
-  <p class="my-5">
-    <strong class="block font-medium mb-1">Email:</strong>
-    <%= user.email %>
-  </p>
+    <p class="my-5">
+      <strong class="block font-medium mb-1">Email:</strong>
+      <%= user.email %>
+    </p>
 
-  <p class="my-5">
-    <strong class="block font-medium mb-1">Password:</strong>
-    <%= user.password %>
-  </p>
+    <p class="my-5">
+      <strong class="block font-medium mb-1">Password:</strong>
+      <%= user.password %>
+    </p>
 
-  <% if action_name != "show" %>
-    <button class="btn" onclick="my_modal_2.showModal()">
-      show
-    </button>
-    <dialog id="my_modal_2" class="modal">
-      <form method="dialog" class="modal-box">
-        <p class="my-5">
-          <strong class="block font-medium mb-1">Name:</strong>
-          <%= user.name %>
-        </p>
+    <% if action_name != "show" %>
+      <button class="btn" onclick="my_modal_2.showModal()">
+        show
+      </button>
+      <dialog id="my_modal_2" class="modal">
+        <form method="dialog" class="modal-box">
+          <p class="my-5">
+            <strong class="block font-medium mb-1">Name:</strong>
+            <%= user.name %>
+          </p>
 
-        <p class="my-5">
-          <strong class="block font-medium mb-1">Gender:</strong>
-          <%= user.gender %>
-        </p>
+          <p class="my-5">
+            <strong class="block font-medium mb-1">Gender:</strong>
+            <%= user.gender %>
+          </p>
 
-        <p class="my-5">
-          <strong class="block font-medium mb-1">Email:</strong>
-          <%= user.email %>
-        </p>
+          <p class="my-5">
+            <strong class="block font-medium mb-1">Email:</strong>
+            <%= user.email %>
+          </p>
 
-        <p class="my-5">
-          <strong class="block font-medium mb-1">Password:</strong>
-          <%= user.password %>
-        </p>
-        <%= link_to 'Edit this user', edit_user_path(user), class: "btn btn-accent" %>
-        <%= link_to 'Destroy this user', user_path(user), method: :delete, class: "btn btn-secondary" %>
-      </form>
-      <form method="dialog" class="modal-backdrop">
-        <button>close</button>
-      </form>
-    </dialog>
+          <p class="my-5">
+            <strong class="block font-medium mb-1">Password:</strong>
+            <%= user.password %>
+          </p>
+          <%= link_to 'Edit this user', edit_user_path(user), class: "btn btn-accent" %>
+          <%= link_to 'Destroy this user', user_path(user), method: :delete, class: "btn btn-secondary" %>
+        </form>
+        <form method="dialog" class="modal-backdrop">
+          <button>close</button>
+        </form>
+      </dialog>
 
-    <%= link_to 'Edit this user', edit_user_path(user), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %>
-    <hr class="mt-6">
-  <% end %>
-</div>
+      <%= link_to 'Edit this user', edit_user_path(user), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %>
+      <hr class="mt-6">
+    <% end %>
+  </div>
+</main>
