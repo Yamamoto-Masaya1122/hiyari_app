@@ -11,3 +11,13 @@
 }
 
 */
+
+.btn-neutral {
+  --tw-border-opacity: 1;
+  --tw-bg-opacity: 1;
+  --tw-text-opacity: 1;
+  background-color: hsl(var(--n)/var(--tw-bg-opacity));
+  border-color: hsl(var(--n)/var(--tw-border-opacity));
+  color: #ffffff;
+  outline-color: hsl(var(--n)/1);
+}
