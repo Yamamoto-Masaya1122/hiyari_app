@@ -9,10 +9,10 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
-      redirect_to login_path, success: 'User was successfully created.'
+      redirect_to root_path, success: 'User was successfully created.'
     else
       flash.now[:danger] = 'User creation failed.'
-      render :new
+      render :new, status: :unprocessable_entity
     end
   end
 
