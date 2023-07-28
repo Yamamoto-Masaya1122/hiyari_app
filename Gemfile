@@ -81,3 +81,4 @@ end
 
 gem 'sassc'
 gem 'sorcery'
+gem 'rails-i18n'
