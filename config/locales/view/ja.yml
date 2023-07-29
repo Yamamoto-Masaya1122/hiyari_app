@@ -1,0 +1,26 @@
+ja:
+  defaults:
+    login: 'ログイン'
+    register: '登録'
+    logout: 'ログアウト'
+    show: '詳細'
+    login_botton: 'ログインする'
+    user_new_botton: '会員登録する'
+    message:
+      require_login: 'ログインしてください'
+  users:
+    index:
+      title: 'ユーザー一覧'
+    new:
+      title: '会員登録'
+    create:
+      success: 'ユーザー登録が完了しました'
+      fail: 'ユーザー登録に失敗しました'
+  user_sessions:
+    new:
+      title: 'ログイン'
+    create:
+      success: 'ログインしました'
+      fail: 'ログインに失敗しました'
+    destroy:
+      success: 'ログアウトしました'
