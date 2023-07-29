@@ -4,10 +4,10 @@
   </div>
   <div class="flex-none">
     <ul class="menu menu-horizontal text-white">
-      <li><%= link_to 'ユーザー一覧', users_path %></li>
+      <li><%= link_to t('users.index.title'), users_path %></li>
     </ul>
     <ul class="menu menu-horizontal text-white">
-      <li><%= link_to 'ログアウト', logout_path, data: { turbo_method: :delete } %></li>
+      <li><%= link_to t('defaults.logout'), logout_path, data: { turbo_method: :delete } %></li>
     </ul>
   </div>
 </div>

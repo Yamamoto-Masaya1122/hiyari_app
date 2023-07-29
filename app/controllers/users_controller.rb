@@ -12,7 +12,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
-      redirect_back_or_to root_path, success: t('.success')
+      redirect_to login_path, success: t('.success')
     else
       flash.now[:error] = t('.fail')
       render :new, status: :unprocessable_entity
