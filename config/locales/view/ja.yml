@@ -24,3 +24,8 @@ ja:
       fail: 'ログインに失敗しました'
     destroy:
       success: 'ログアウトしました'
+  posts:
+    index:
+      title: '投稿一覧'
+    new:
+      title: '投稿作成'
