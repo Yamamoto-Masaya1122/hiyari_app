@@ -1,0 +1,17 @@
+<div class="col-sm-12 col-lg-4 mb-3">
+  <div class="card">
+    <div class="card-body">
+      <h4 class="card-title">
+        <%= post.title %>
+      </h4>
+      <ul class="list-inline">
+        <li class="list-inline-item">
+          <%= post.user.name %>
+        </li>
+        <li class="list-inline-item">
+          <%= l post.created_at, format: :long %>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
