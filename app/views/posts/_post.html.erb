@@ -1,17 +1,16 @@
-<div class="col-sm-12 col-lg-4 mb-3">
-  <div class="card">
-    <div class="card-body">
-      <h4 class="card-title">
-        <%= post.title %>
-      </h4>
-      <ul class="list-inline">
-        <li class="list-inline-item">
-          <%= post.user.name %>
-        </li>
-        <li class="list-inline-item">
-          <%= l post.created_at, format: :long %>
-        </li>
-      </ul>
+<div class="card w-96 bg-base-100 shadow-xl my-2">
+  <div class="card-body">
+    <h2 class="card-title"><%= post.title %></h2>
+    <ul class="list-inline">
+      <li class="list-inline-item">
+        <%= post.user.name %>
+      </li>
+      <li class="list-inline-item">
+        <%= l post.created_at, format: :long %>
+      </li>
+    </ul>
+    <div class="card-actions justify-end">
+      <button class="btn btn-accent">詳細</button>
     </div>
   </div>
 </div>
