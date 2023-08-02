@@ -1,4 +1,28 @@
-<div>
-  <h1 class="font-bold text-4xl">Posts#show</h1>
-  <p>Find me in app/views/posts/show.html.erb</p>
-</div>
+<% content_for(:title, t('.title')) %>
+<div class="container pt-5">
+  <div class="row mb-3">
+    <div class="col-lg-8 offset-lg-2">
+      <h1><%= t('.title') %></h1>
+      <!-- 掲示板内容 -->
+      <article class="card">
+        <div class="card-body">
+          <div class='row'>
+            <div class='col-md-9'>
+              <h3 class="d-inline"><%= @post.title %></h3>	
+              <ul class="list-inline">
+                <li class="list-inline-item">by <%= @post.user.name %></li>
+                <li class="list-inline-item"><%= l @post.created_at, format: :long %></li>
+              </ul>
+            </div>
+          </div>
+          <p><%= simple_format(@post.body) %></p>
+          <div class="card-actions justify-end">
+            <button class="btn btn-info"><%= link_to '編集', edit_post_path(@post)%></button>
+          </div>
+          <div class="card-actions justify-end">
+            <button class="btn btn-secondary"><%= link_to '削除', post_path(@post),data: { turbo_method: :delete } %></button>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
