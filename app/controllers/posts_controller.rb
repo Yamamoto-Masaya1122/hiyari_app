@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
-  skip_before_action :require_login, only: %i[index]
+  skip_before_action :require_login, only: %i[index show]
+  before_action :set_post, only: %i[show edit update destroy]
   
   def index
     @posts = Post.includes(:user).order(created_at: :desc)
@@ -18,15 +19,30 @@ class PostsController < ApplicationController
     end
   end
 
-  def show
+  def show; end
+
+  def edit; end
+
+  def update
+    if @post.update(post_params)
+      redirect_to post_path(@post)
+    else
+      render :edit
+    end
   end
 
-  def edit
+  def destroy
+    @post.destroy!
+    redirect_to posts_path
   end
 
   private
 
   def post_params
     params.require(:post).permit(:title, :body)
+  end
+
+  def set_post
+    @post = Post.find(params[:id])
   end
 end
