@@ -13,13 +13,16 @@
         </div>
       </div>
       <p><%= simple_format(@post.body) %></p>
-      <div class="inline-flex">
-        <div class="card-actions justify-end ml-2">
-          <button class="btn btn-info"><%= link_to '編集', edit_post_path(@post)%></button>
-        </div>
-        <div class="card-actions justify-end ml-2">
-          <button class="btn btn-secondary"><%= link_to '削除', post_path(@post),data: { turbo_method: :delete } %></button>
-        </div>
+      <% if current_user == @post.user %>
+        <div class="inline-flex">
+          <div class="card-actions justify-end ml-2">
+            <button class="btn btn-info"><%= link_to '編集', edit_post_path(@post)%></button>
+          </div>
+          <div class="card-actions justify-end ml-2">
+            <button class="btn btn-secondary"><%= link_to '削除', post_path(@post),data: { turbo_method: :delete } %></button>
+          </div>
+        </div
+      <% end %>
     </div>
   </div>
 </div>
